@@ -11,15 +11,23 @@
  * 
  */
 
+function aplicaDesconto(valor, desconto) {
+    return (valor - (valor * desconto / 100))
+}
+
+function aplicaJuros(valor, juros) {
+    return (valor + (valor * juros / 100))
+}
+
 const precoEtiqueta = 100
 var formaPagamento = 4
 
 if (formaPagamento === 1) {
-    console.log("Valor total com desconto débito: " + (precoEtiqueta - (precoEtiqueta * 0.10)))
+    console.log("Valor total com desconto débito: " + aplicaDesconto(precoEtiqueta, 10))
 } else if (formaPagamento === 2) {
-    console.log("Valor total com desconto PIX: " + (precoEtiqueta - (precoEtiqueta * 0.15)))
+    console.log("Valor total com desconto PIX: " + aplicaDesconto(precoEtiqueta, 15))
 } else if (formaPagamento === 3) {
-    console.log("Valor total com desconto PIX: " + precoEtiqueta)
+    console.log("Valor total parcelado duas vezes: " + precoEtiqueta)
 } else {
-    console.log("Valor total com desconto PIX: " + (precoEtiqueta + (precoEtiqueta * 0.10)))
+    console.log("Valor total com juros: " + aplicaJuros(precoEtiqueta, 10))
 }
