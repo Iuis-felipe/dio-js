@@ -1,0 +1,8 @@
+Faça um programa que receba N (quantidade de números) e seus respectivos valores
+Imprima o maior número par e o menor número impar 
+
+Entrada: 5, 3, 4, 1, 10, 8
+
+Saida:
+Maior numero par: 10
+Menor numero impar: 1
